@@ -1,8 +1,6 @@
 import { Resend } from 'resend';
 const resend = new Resend(Bun.env.RESEND_API_KEY as string);
 
-console.log(Bun.env.RESEND_API_KEY as string);
-
 export const sendMail = async (email: string[], trackingId: string) => {
 	const trackingURL = `${Bun.env.APP_URL}/track/track-email/${trackingId}`;
 
